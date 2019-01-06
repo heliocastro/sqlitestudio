@@ -1,0 +1,18 @@
+set(COMMON_SRCS
+    bistrhash.cpp
+    blockingsocket.cpp
+    column.cpp
+    lazytrigger.cpp
+    memoryusage.cpp
+    nulldevice.cpp
+    private/blockingsocketprivate.cpp
+    readwritelocker.cpp
+    signalwait.cpp
+    table.cpp
+    threadwitheventloop.cpp
+    utils.cpp
+    utils_sql.cpp
+    xmldeserializer.cpp
+)
+
+add_library(core_COMMON OBJECT ${COMMON_SRCS})

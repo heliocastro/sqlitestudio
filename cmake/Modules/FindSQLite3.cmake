@@ -60,4 +60,3 @@ endif()
 
 mark_as_advanced(SQLITE3_INCLUDE_DIR)
 
-

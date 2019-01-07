@@ -1,0 +1,27 @@
+set(PLUGINS_SRC
+    builtinplugin.cpp
+    dbpluginsqlite3.cpp
+    dbpluginstdfilebase.cpp
+    genericexportplugin.cpp
+    genericplugin.cpp
+    pluginsymbolresolver.cpp
+    plugintype.cpp
+    populateconstant.cpp
+    populatedictionary.cpp
+    populaterandom.cpp
+    populaterandomtext.cpp
+    populatescript.cpp
+    populatesequence.cpp
+    scriptingqt.cpp
+    scriptingqtdbproxy.cpp
+    scriptingsql.cpp
+    sqlformatterplugin.cpp
+)
+
+add_object_library(core_PLUGINS
+    SOURCES
+        ${PLUGINS_SRC}
+    LIBRARIES
+        Qt5::Core
+        Qt5::Script
+)

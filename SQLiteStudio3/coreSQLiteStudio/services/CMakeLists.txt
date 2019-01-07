@@ -1,0 +1,25 @@
+set(SERVICES_SRCS
+    codeformatter.cpp
+    config.cpp
+    dbmanager.cpp
+    exportmanager.cpp
+    extralicensemanager.cpp
+    functionmanager.cpp
+    impl/collationmanagerimpl.cpp
+    impl/configimpl.cpp
+    impl/dbmanagerimpl.cpp
+    impl/functionmanagerimpl.cpp
+    impl/pluginmanagerimpl.cpp
+    impl/sqliteextensionmanagerimpl.cpp
+    importmanager.cpp
+    notifymanager.cpp
+    populatemanager.cpp
+    updatemanager.cpp
+)
+
+add_object_library(core_SERVICES
+    SOURCES
+        ${SERVICES_SRCS}
+    LIBRARIES
+        Qt5::Core
+)

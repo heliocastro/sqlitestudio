@@ -4,3 +4,5 @@ include_directories(
 
 add_subdirectory(common)
 add_subdirectory(db)
+add_subdirectory(services)
+add_subdirectory(config_builder)

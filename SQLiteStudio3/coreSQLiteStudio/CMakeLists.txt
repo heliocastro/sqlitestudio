@@ -46,6 +46,18 @@ set( CORESQLITE_SRCS
     coreSQLiteStudio.qrc
 )
 
+set(CORESQLITE_TS
+    translations/coreSQLiteStudio_de.ts
+    translations/coreSQLiteStudio_it.ts
+    translations/coreSQLiteStudio_zh_CN.ts
+    translations/coreSQLiteStudio_sk.ts
+    translations/coreSQLiteStudio_ru.ts
+    translations/coreSQLiteStudio_pt_BR.ts
+    translations/coreSQLiteStudio_fr.ts
+    translations/coreSQLiteStudio_es.ts
+    translations/coreSQLiteStudio_pl.ts
+)
+
 add_library(coreSQLiteStudio SHARED
     ${CORESQLITE_SRCS}
     $<TARGET_OBJECTS:core_COMMON>
@@ -70,3 +82,6 @@ set_target_properties(coreSQLiteStudio PROPERTIES
     VERSION 1.0.0
     SOVERSION 1
     )
+
+qt5_add_translation(CORESQLITE_QM ${CORESQLITE_TS})
+add_custom_target(translations DEPENDS ${CORESQLITE_QM})

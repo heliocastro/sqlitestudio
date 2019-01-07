@@ -18,7 +18,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(BUILD_SHARED_LIBS ON)
 
-find_package(Qt5 COMPONENTS Core Gui Network Script REQUIRED)
+find_package(Qt5 COMPONENTS Core Gui Network Script LinguistTools REQUIRED)
 find_package(SQLite3 REQUIRED)
 find_package(Curses REQUIRED)
 

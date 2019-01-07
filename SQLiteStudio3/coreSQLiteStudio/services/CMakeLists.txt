@@ -26,3 +26,4 @@ add_object_library(core_SERVICES
     LIBRARIES
         Qt5::Core
 )
+

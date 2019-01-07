@@ -74,14 +74,6 @@ add_library(coreSQLiteStudio SHARED
     $<TARGET_OBJECTS:core_SERVICES>
     $<TARGET_OBJECTS:core_CONFIG_BUILDER>
     $<TARGET_OBJECTS:core_DIFF>
-    )
-
-target_link_libraries(coreSQLiteStudio
-    PUBLIC
-        Qt5::Core
-        Qt5::Network
-        Qt5::Script
-        SQLite3::SQLite3
 )
 
 set_target_properties(coreSQLiteStudio PROPERTIES

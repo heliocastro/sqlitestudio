@@ -101,3 +101,4 @@ set_target_properties(guiSQLiteStudio PROPERTIES
 install(TARGETS guiSQLiteStudio
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     )
+

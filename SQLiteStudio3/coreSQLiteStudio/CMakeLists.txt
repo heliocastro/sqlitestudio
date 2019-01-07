@@ -65,3 +65,8 @@ target_link_libraries(coreSQLiteStudio
         Qt5::Script
         SQLite3::SQLite3
 )
+
+set_target_properties(coreSQLiteStudio PROPERTIES
+    VERSION 1.0.0
+    SOVERSION 1
+    )

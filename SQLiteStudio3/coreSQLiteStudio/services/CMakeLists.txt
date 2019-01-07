@@ -15,6 +15,9 @@ set(SERVICES_SRCS
     notifymanager.cpp
     populatemanager.cpp
     updatemanager.cpp
+    collationmanager.h
+    pluginmanager.h
+    sqliteextensionmanager.h
 )
 
 add_object_library(core_SERVICES

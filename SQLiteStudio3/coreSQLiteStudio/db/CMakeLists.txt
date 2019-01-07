@@ -1,0 +1,37 @@
+set(DB_SRCS
+    abstractdb.cpp
+    asyncqueryrunner.cpp
+    attachguard.cpp
+    chainexecutor.cpp
+    db.cpp
+    dbsqlite3.cpp
+    invaliddb.cpp
+    queryexecutor.cpp
+    queryexecutorsteps/queryexecutoraddrowids.cpp
+    queryexecutorsteps/queryexecutorattaches.cpp
+    queryexecutorsteps/queryexecutorcellsize.cpp
+    queryexecutorsteps/queryexecutorcolumns.cpp
+    queryexecutorsteps/queryexecutorcountresults.cpp
+    queryexecutorsteps/queryexecutordatasources.cpp
+    queryexecutorsteps/queryexecutordetectschemaalter.cpp
+    queryexecutorsteps/queryexecutorexecute.cpp
+    queryexecutorsteps/queryexecutorexplainmode.cpp
+    queryexecutorsteps/queryexecutorlimit.cpp
+    queryexecutorsteps/queryexecutororder.cpp
+    queryexecutorsteps/queryexecutorparsequery.cpp
+    queryexecutorsteps/queryexecutorreplaceviews.cpp
+    queryexecutorsteps/queryexecutorstep.cpp
+    queryexecutorsteps/queryexecutorvaluesmode.cpp
+    queryexecutorsteps/queryexecutorwrapdistinctresults.cpp
+    sqlerrorcodes.cpp
+    sqlerrorresults.cpp
+    sqlquery.cpp
+    sqlresultsrow.cpp
+)
+
+add_object_library(core_DB
+    SOURCES
+        ${DB_SRCS}
+    LIBRARIES
+        Qt5::Core
+    )

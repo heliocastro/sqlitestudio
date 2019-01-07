@@ -50,11 +50,11 @@ find_package_handle_standard_args(
      	SQLITE3_INCLUDE_DIR
   )
 
-if(NOT TARGET SQLITE3::SQLITE3)
-    add_library(SQLITE3::SQLITE3 UNKNOWN IMPORTED)
-    set_target_properties(SQLITE3::SQLITE3 PROPERTIES
+if(NOT TARGET SQLite3::SQLite3)
+    add_library(SQLite3::SQLite3 UNKNOWN IMPORTED)
+    set_target_properties(SQLite3::SQLite3 PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${SQLITE3_INCLUDE_DIR}")
-    set_property(TARGET SQLITE3::SQLITE3 APPEND PROPERTY
+    set_property(TARGET SQLite3::SQLite3 APPEND PROPERTY
         IMPORTED_LOCATION "${SQLITE3_LIBRARIES}")
 endif()
 

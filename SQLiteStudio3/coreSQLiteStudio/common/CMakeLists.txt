@@ -15,4 +15,11 @@ set(COMMON_SRCS
     xmldeserializer.cpp
 )
 
-add_library(core_COMMON OBJECT ${COMMON_SRCS})
+add_object_library(core_COMMON
+    SOURCES
+        ${COMMON_SRCS}
+    LIBRARIES
+        SQLite3::SQLite3
+        Qt5::Core
+        Qt5::Network
+    )

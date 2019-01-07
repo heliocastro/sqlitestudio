@@ -93,3 +93,4 @@ set_target_properties(coreSQLiteStudio PROPERTIES
 install(TARGETS coreSQLiteStudio
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
         )
+

@@ -1,0 +1,19 @@
+set(DATAGRID_SRCS
+    sqlquerymodel.cpp
+    sqlqueryitem.cpp
+    sqlqueryview.cpp
+    sqlquerymodelcolumn.cpp
+    sqlqueryitemdelegate.cpp
+    sqltablemodel.cpp
+    sqlqueryrownummodel.cpp
+    sqlviewmodel.cpp
+    )
+
+add_object_library(gui_DATAGRID
+    SOURCES
+        ${DATAGRID_SRCS}
+    LIBRARIES
+        Qt5::Core
+        Qt5::Gui
+        Qt5::Widgets
+    )

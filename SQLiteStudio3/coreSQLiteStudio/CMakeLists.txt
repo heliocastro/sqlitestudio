@@ -1,5 +1,6 @@
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_BINARY_DIR}
 )
 
 set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--as-needed,--no-undefined")
@@ -13,8 +14,9 @@ add_subdirectory(parser)
 add_subdirectory(plugins)
 add_subdirectory(rsa)
 add_subdirectory(impl)
+add_subdirectory(diff)
 
-set( CORESQLITE_SRCS
+set(CORESQLITE_SRCS
     committable.cpp
     completioncomparer.cpp
     completionhelper.cpp
@@ -68,6 +70,7 @@ add_library(coreSQLiteStudio SHARED
     $<TARGET_OBJECTS:core_IMPL>
     $<TARGET_OBJECTS:core_SERVICES>
     $<TARGET_OBJECTS:core_CONFIG_BUILDER>
+    $<TARGET_OBJECTS:core_DIFF>
     )
 
 target_link_libraries(coreSQLiteStudio

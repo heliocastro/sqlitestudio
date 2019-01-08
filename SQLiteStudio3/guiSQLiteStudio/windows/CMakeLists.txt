@@ -1,0 +1,31 @@
+set(WINDOWS_SRCS
+    tablewindow.cpp
+    editorwindow.cpp
+    tablestructuremodel.cpp
+    tableconstraintsmodel.cpp
+    constrainttabmodel.cpp
+    viewwindow.cpp
+    ddlhistorywindow.cpp
+    functionseditor.cpp
+    functionseditormodel.cpp
+    collationseditor.cpp
+    collationseditormodel.cpp
+    sqliteextensioneditor.cpp
+    sqliteextensioneditormodel.cpp
+    tablewindow.ui
+    editorwindow.ui
+    viewwindow.ui
+    ddlhistorywindow.ui
+    functionseditor.ui
+    collationseditor.ui
+    sqliteextensioneditor.ui
+    )
+
+add_object_library(gui_WINDOWS
+    SOURCES
+        ${WINDOWS_SRCS}
+    LIBRARIES
+        Qt5::Core
+        Qt5::Gui
+        Qt5::Widgets
+    )

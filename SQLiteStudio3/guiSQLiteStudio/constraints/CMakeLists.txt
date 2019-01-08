@@ -1,0 +1,34 @@
+set(CONSTRAINTS_SRCS
+    tableprimarykeypanel.cpp
+    constraintpanel.cpp
+    tableforeignkeypanel.cpp
+    tableuniquepanel.cpp
+    tablepkanduniquepanel.cpp
+    tablecheckpanel.cpp
+    columncheckpanel.cpp
+    constraintcheckpanel.cpp
+    columnforeignkeypanel.cpp
+    columnprimarykeypanel.cpp
+    columnuniquepanel.cpp
+    columnuniqueandnotnullpanel.cpp
+    columnnotnullpanel.cpp
+    columncollatepanel.cpp
+    columndefaultpanel.cpp
+    tableforeignkeypanel.ui
+    tablepkanduniquepanel.ui
+    constraintcheckpanel.ui
+    columnforeignkeypanel.ui
+    columnprimarykeypanel.ui
+    columnuniqueandnotnullpanel.ui
+    columncollatepanel.ui
+    columndefaultpanel.ui
+    )
+
+add_object_library(gui_CONSTRAINTS
+    SOURCES
+        ${CONSTRAINTS_SRCS}
+    LIBRARIES
+        Qt5::Core
+        Qt5::Gui
+        Qt5::Widgets
+    )

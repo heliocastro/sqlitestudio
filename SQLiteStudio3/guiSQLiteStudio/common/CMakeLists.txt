@@ -1,0 +1,34 @@
+set(GUICOMMON_SRCS
+    tablewidget.cpp
+    extlineedit.cpp
+    intvalidator.cpp
+    widgetcover.cpp
+    numericspinbox.cpp
+    extactioncontainer.cpp
+    extaction.cpp
+    fontedit.cpp
+    colorbutton.cpp
+    userinputfilter.cpp
+    verifiablewizardpage.cpp
+    widgetstateindicator.cpp
+    configradiobutton.cpp
+    fileedit.cpp
+    configcombobox.cpp
+    extactionprototype.cpp
+    datawidgetmapper.cpp
+    ipvalidator.cpp
+    centerediconitemdelegate.cpp
+    exttableview.cpp
+    exttablewidget.cpp
+    fontedit.ui
+    )
+
+add_object_library(gui_COMMON
+    SOURCES
+        ${GUICOMMON_SRCS}
+    LIBRARIES
+        Qt5::Core
+        Qt5::Widgets
+        Qt5::Script
+        Qt5::Gui
+    )

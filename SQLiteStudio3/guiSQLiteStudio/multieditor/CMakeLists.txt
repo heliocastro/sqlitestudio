@@ -1,0 +1,21 @@
+set(MULTIEDITOR_SRCS
+    multieditor.cpp
+    multieditorwidget.cpp
+    multieditortext.cpp
+    multieditornumeric.cpp
+    multieditordatetime.cpp
+    multieditordate.cpp
+    multieditortime.cpp
+    multieditorbool.cpp
+    multieditorhex.cpp
+    multieditordialog.cpp
+    )
+
+add_object_library(gui_MULTIEDITOR
+    SOURCES
+        ${MULTIEDITOR_SRCS}
+    LIBRARIES
+        Qt5::Core
+        Qt5::Gui
+        Qt5::Widgets
+    )

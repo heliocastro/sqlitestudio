@@ -35,3 +35,4 @@ endif()
 
 add_subdirectory(SQLiteStudio3)
 add_subdirectory(Plugins)
+

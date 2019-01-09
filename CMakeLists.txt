@@ -7,18 +7,21 @@ project(sqlitestudio
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
 
+include(sqlitestudio_defaults)
 include(add_object_library)
 
-set(CMAKE_VERBOSE_MAKEFILE ON)
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-set(BUILD_SHARED_LIBS ON)
+find_package(Qt5 COMPONENTS REQUIRED
+    Core
+    Gui
+    Network
+    Xml
+    Script
+    Widgets
+    LinguistTools
+    UiTools
+    Svg
+    )
 
-find_package(Qt5 COMPONENTS Core Gui Network Xml Script Widgets LinguistTools UiTools REQUIRED)
 find_package(SQLite3 REQUIRED)
 
 if(UNIX)

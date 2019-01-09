@@ -3,7 +3,6 @@ include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}/guiSQLiteStudio_autogen/include
 )
 
-set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--as-needed,--no-undefined")
 add_definitions(-DGUISQLITESTUDIO_LIBRARY)
 
 add_subdirectory(dbtree)
@@ -57,6 +56,7 @@ set(GUISQLITE_SRCS
     mainwindow.ui
     statusfield.ui
     debugconsole.ui
+    icons.qrc
     guiSQLiteStudio.qrc
     )
 
@@ -84,6 +84,7 @@ target_link_libraries(guiSQLiteStudio
         Qt5::Widgets
         Qt5::UiTools
         Qt5::Xml
+        Qt5::Svg
 )
 
 target_include_directories(guiSQLiteStudio INTERFACE

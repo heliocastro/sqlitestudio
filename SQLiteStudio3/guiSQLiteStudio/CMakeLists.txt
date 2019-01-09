@@ -1,5 +1,4 @@
 include_directories(
-    ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}/guiSQLiteStudio_autogen/include
 )
@@ -85,6 +84,11 @@ target_link_libraries(guiSQLiteStudio
         Qt5::Widgets
         Qt5::UiTools
         Qt5::Xml
+)
+
+target_include_directories(guiSQLiteStudio INTERFACE
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/guiSQLiteStudio_autogen/include>
 )
 
 set_target_properties(guiSQLiteStudio PROPERTIES

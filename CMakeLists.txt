@@ -20,7 +20,11 @@ set(BUILD_SHARED_LIBS ON)
 
 find_package(Qt5 COMPONENTS Core Gui Network Xml Script Widgets LinguistTools UiTools REQUIRED)
 find_package(SQLite3 REQUIRED)
-find_package(Curses REQUIRED)
+
+if(UNIX)
+    find_package(Curses REQUIRED)
+    find_package(readline REQUIRED)
+endif()
 
 add_subdirectory(SQLiteStudio3)
 #add_subdirectory(Plugins)

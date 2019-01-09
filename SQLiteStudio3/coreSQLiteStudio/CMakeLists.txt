@@ -60,8 +60,11 @@ set(CORESQLITE_TS
     translations/coreSQLiteStudio_pl.ts
 )
 
+qt5_add_translation(CORESQLITE_QM ${CORESQLITE_TS})
+
 add_library(coreSQLiteStudio SHARED
     ${CORESQLITE_SRCS}
+    ${CORESQLITE_QM}
     $<TARGET_OBJECTS:core_COMMON>
     $<TARGET_OBJECTS:core_PLUGINS>
     $<TARGET_OBJECTS:core_PARSER>
@@ -85,6 +88,3 @@ set_target_properties(coreSQLiteStudio PROPERTIES
     VERSION 1.0.0
     SOVERSION 1
     )
-
-qt5_add_translation(CORESQLITE_QM ${CORESQLITE_TS})
-add_custom_target(translations DEPENDS ${CORESQLITE_QM})

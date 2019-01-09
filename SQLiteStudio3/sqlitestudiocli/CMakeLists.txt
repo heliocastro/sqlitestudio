@@ -1,0 +1,62 @@
+set(SQLITESTUDIOCLI_SOURCES
+    sqlitestudiocli.qrc
+    main.cpp
+    cli.cpp
+    commands/clicommand.cpp
+    commands/clicommandfactory.cpp
+    commands/clicommandadd.cpp
+    commands/clicommandremove.cpp
+    commands/clicommandexit.cpp
+    commands/clicommanddblist.cpp
+    commands/clicommanduse.cpp
+    commands/clicommandopen.cpp
+    commands/clicommandclose.cpp
+    commands/clicommandsql.cpp
+    clicommandexecutor.cpp
+    cli_config.cpp
+    commands/clicommandhelp.cpp
+    cliutils.cpp
+    commands/clicommandtables.cpp
+    climsghandler.cpp
+    commands/clicommandmode.cpp
+    commands/clicommandnullvalue.cpp
+    commands/clicommandhistory.cpp
+    commands/clicommanddir.cpp
+    commands/clicommandpwd.cpp
+    commands/clicommandcd.cpp
+    clicommandsyntax.cpp
+    commands/clicommandtree.cpp
+    clicompleter.cpp
+    commands/clicommanddesc.cpp
+    )
+
+set(SQLITESTUDIOCLI_TS
+    translations/sqlitestudiocli_ro_RO.ts
+    translations/sqlitestudiocli_de.ts
+    translations/sqlitestudiocli_it.ts
+    translations/sqlitestudiocli_zh_CN.ts
+    translations/sqlitestudiocli_sk.ts
+    translations/sqlitestudiocli_ru.ts
+    translations/sqlitestudiocli_pt_BR.ts
+    translations/sqlitestudiocli_fr.ts
+    translations/sqlitestudiocli_es.ts
+    translations/sqlitestudiocli_pl.ts
+    )
+
+qt5_add_translation(SQLITESTUDIOCLI_QM
+    ${SQLITESTUDIOCLI_TS}
+    )
+
+add_executable(sqlitestudiocli
+    ${SQLITESTUDIOCLI_SOURCES}
+    ${SQLITESTUDIOCLI_QM}
+    )
+
+target_link_libraries(sqlitestudiocli
+    PRIVATE
+        Qt5::Core
+        readline::readline
+    PUBLIC
+        coreSQLiteStudio
+    )
+

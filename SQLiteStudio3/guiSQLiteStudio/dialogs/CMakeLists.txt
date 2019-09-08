@@ -17,7 +17,6 @@ set(DIALOGS_SRCS
     importdialog.cpp
     populatedialog.cpp
     populateconfigdialog.cpp
-    dbconverterdialog.cpp
     dbdialog.cpp
     aboutdialog.cpp
     newversiondialog.cpp
@@ -45,7 +44,6 @@ set(DIALOGS_SRCS
     importdialog.ui
     populatedialog.ui
     populateconfigdialog.ui
-    dbconverterdialog.ui
     dbdialog.ui
     aboutdialog.ui
     newversiondialog.ui

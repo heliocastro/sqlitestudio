@@ -25,7 +25,6 @@ set(CORESQLITE_SRCS
     datatype.cpp
     dbattacher.cpp
     dbobjectorganizer.cpp
-    dbversionconverter.cpp
     ddlhistorymodel.cpp
     expectedtoken.cpp
     exportworker.cpp

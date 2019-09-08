@@ -48,7 +48,6 @@ set(PARSER_SRCS
     parser.cpp
     parsererror.cpp
     parser_helper_stubs.cpp
-    sqlite2_parse.cpp
     sqlite3_parse.cpp
     statementtokenbuilder.cpp
     token.cpp

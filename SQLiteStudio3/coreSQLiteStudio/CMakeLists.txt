@@ -87,4 +87,9 @@ target_link_libraries(coreSQLiteStudio
 set_target_properties(coreSQLiteStudio PROPERTIES
     VERSION 1.0.0
     SOVERSION 1
+    INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}
     )
+
+install(TARGETS coreSQLiteStudio
+        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        )

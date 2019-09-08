@@ -59,6 +59,7 @@
 #include <QDebug>
 #include <limits.h>
 
+#undef assert
 #define assert(X) Q_ASSERT(X)
 #define UNUSED_PARAMETER(X) (void)(X)
 #define DONT_INHERIT_TOKENS(X) noTokenInheritanceFields << X

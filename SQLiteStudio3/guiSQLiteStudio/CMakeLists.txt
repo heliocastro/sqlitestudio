@@ -88,11 +88,16 @@ target_link_libraries(guiSQLiteStudio
 )
 
 target_include_directories(guiSQLiteStudio INTERFACE
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/guiSQLiteStudio_autogen/include>
-)
+    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/SQLiteStudio3/guiSQLiteStudio>
+    $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/SQLiteStudio3/guiSQLiteStudio>
+    $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/SQLiteStudio3/guiSQLiteStudio/guiSQLiteStudio_autogen/include>
+    )
 
 set_target_properties(guiSQLiteStudio PROPERTIES
     VERSION 1.0.0
     SOVERSION 1
+    )
+
+install(TARGETS guiSQLiteStudio
+        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     )

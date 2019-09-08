@@ -48,3 +48,6 @@ target_compile_definitions(sqlitestudio
         QAPPLICATION_CLASS=QApplication
     )
 
+install(TARGETS sqlitestudio
+        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    )

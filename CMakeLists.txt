@@ -1,12 +1,16 @@
 cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
 
 project(sqlitestudio
-    VERSION 3.2.1
+    VERSION 3.3.0
     LANGUAGES C CXX)
 
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
 
+# Cmake includes
+include(GNUInstallDirs)
+
+# Local includes
 include(sqlitestudio_defaults)
 include(add_object_library)
 
@@ -30,4 +34,4 @@ if(UNIX)
 endif()
 
 add_subdirectory(SQLiteStudio3)
-#add_subdirectory(Plugins)
+add_subdirectory(Plugins)

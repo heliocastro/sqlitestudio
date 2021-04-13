@@ -2,6 +2,7 @@ set(COMMON_SRCS
     bistrhash.cpp
     blockingsocket.cpp
     column.cpp
+    compatibility.cpp
     lazytrigger.cpp
     memoryusage.cpp
     nulldevice.cpp
@@ -14,12 +15,3 @@ set(COMMON_SRCS
     utils_sql.cpp
     xmldeserializer.cpp
 )
-
-add_object_library(core_COMMON
-    SOURCES
-        ${COMMON_SRCS}
-    LIBRARIES
-        SQLite3::SQLite3
-        Qt5::Core
-        Qt5::Network
-    )
